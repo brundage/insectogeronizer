@@ -10,6 +10,10 @@ group :assets do
   gem 'sass-rails', '~> 3.2.3'
 end
 
+group :development do
+  gem 'rspec-rails'
+end
+
 group :test do
   gem 'database_cleaner'
   gem 'guard'
