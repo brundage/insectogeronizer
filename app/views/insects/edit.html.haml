@@ -1,0 +1,11 @@
+= form_for @insect do |f|
+  = render 'form', form: f
+  = f.submit name: ''
+
+  %h2 Development Stages
+
+  - @insect.development_stages.build
+  = f.fields_for :development_stages do |ds_fields|
+    = render 'development_stages/form', form: ds_fields
+
+  = f.submit name: ''

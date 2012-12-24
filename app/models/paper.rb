@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: papers
+#
+#  id           :integer          not null, primary key
+#  journal_id   :integer          not null
+#  page_end     :integer          not null
+#  page_start   :integer          not null
+#  published_on :date             not null
+#  title        :string(255)      not null
+#  volume       :string(255)      not null
+#
+
 class Paper < ActiveRecord::Base
 
   attr_accessible :authors_attributes, :journal, :locations_attributes,
@@ -14,8 +27,8 @@ class Paper < ActiveRecord::Base
   has_many :paper_results, dependent: :destroy, inverse_of: :paper
 
   validates :journal, presence: true
-  validates :page_end, presence: true
-  validates :page_start, presence: true
+  validates :page_end, presence: true, numericality: { only_integer: true }
+  validates :page_start, presence: true, numericality: { only_integer: true }
   validates :published_on, presence: true
   validates :title, presence: true
   validates :volume, presence: true

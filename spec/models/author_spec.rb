@@ -1,3 +1,11 @@
+# == Schema Information
+#
+# Table name: authors
+#
+#  id   :integer          not null, primary key
+#  name :string(255)      not null
+#
+
 require 'spec_helper'
 
 describe Author do

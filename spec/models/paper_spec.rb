@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: papers
+#
+#  id           :integer          not null, primary key
+#  journal_id   :integer          not null
+#  page_end     :integer          not null
+#  page_start   :integer          not null
+#  published_on :date             not null
+#  title        :string(255)      not null
+#  volume       :string(255)      not null
+#
+
 require 'spec_helper'
 
 describe Paper do
@@ -18,7 +31,9 @@ describe Paper do
 
   it { should validate_presence_of :journal }
   it { should validate_presence_of :page_end }
+  it { should validate_numericality_of(:page_end).only_integer }
   it { should validate_presence_of :page_start }
+  it { should validate_numericality_of(:page_start).only_integer }
   it { should validate_presence_of :published_on }
   it { should validate_presence_of :title }
   it { should validate_presence_of :volume }

@@ -1,3 +1,11 @@
+# == Schema Information
+#
+# Table name: journals
+#
+#  id   :integer          not null, primary key
+#  name :string(255)      not null
+#
+
 require 'spec_helper'
 
 describe Journal do

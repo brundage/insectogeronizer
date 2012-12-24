@@ -1,3 +1,11 @@
+# == Schema Information
+#
+# Table name: journals
+#
+#  id   :integer          not null, primary key
+#  name :string(255)      not null
+#
+
 class Journal < ActiveRecord::Base
 
   attr_accessible :name

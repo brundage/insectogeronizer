@@ -1,3 +1,11 @@
+# == Schema Information
+#
+# Table name: authors
+#
+#  id   :integer          not null, primary key
+#  name :string(255)      not null
+#
+
 class Author < ActiveRecord::Base
 
   attr_accessible :name

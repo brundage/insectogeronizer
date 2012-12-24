@@ -1,3 +1,13 @@
+# == Schema Information
+#
+# Table name: development_stages
+#
+#  id        :integer          not null, primary key
+#  name      :string(255)      not null
+#  insect_id :integer          not null
+#  position  :integer          default(1), not null
+#
+
 require 'spec_helper'
 
 describe DevelopmentStage do

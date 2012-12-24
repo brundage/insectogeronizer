@@ -1,3 +1,13 @@
+# == Schema Information
+#
+# Table name: development_stages
+#
+#  id        :integer          not null, primary key
+#  name      :string(255)      not null
+#  insect_id :integer          not null
+#  position  :integer          default(1), not null
+#
+
 class DevelopmentStage < ActiveRecord::Base
 
   attr_accessible :insect, :name, :position

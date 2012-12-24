@@ -36,7 +36,13 @@ GEM
     activesupport (3.2.9)
       i18n (~> 0.6)
       multi_json (~> 1.0)
+    annotate (2.5.0)
+      rake
     arel (3.0.2)
+    better_errors (0.3.2)
+      coderay (>= 1.0.0)
+      erubis (>= 2.7.0)
+    binding_of_caller (0.6.8)
     bourne (1.1.2)
       mocha (= 0.10.5)
     builder (3.0.4)
@@ -60,6 +66,12 @@ GEM
     guard-rspec (2.3.1)
       guard (>= 1.1)
       rspec (~> 2.11)
+    haml (3.1.6)
+    haml-rails (0.3.4)
+      actionpack (~> 3.0)
+      activesupport (~> 3.0)
+      haml (~> 3.0)
+      railties (~> 3.0)
     hike (1.2.1)
     i18n (0.6.1)
     journey (1.0.4)
@@ -100,6 +112,8 @@ GEM
       activesupport (= 3.2.9)
       bundler (~> 1.0)
       railties (= 3.2.9)
+    rails3-jquery-autocomplete (1.0.10)
+      rails (~> 3.0)
     railties (3.2.9)
       actionpack (= 3.2.9)
       activesupport (= 3.2.9)
@@ -174,17 +188,23 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  annotate
+  better_errors
+  binding_of_caller
   database_cleaner
   draper
   guard
   guard-rspec
+  haml-rails
   jquery-rails
   pg
   rails (= 3.2.9)
+  rails3-jquery-autocomplete
   rb-fchange
   rb-fsevent
   rb-inotify
   rspec-rails
+  sass
   sass-rails (~> 3.2.3)
   shoulda-matchers
   simplecov!

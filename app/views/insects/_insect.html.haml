@@ -1,0 +1,9 @@
+= content_tag_for :div, insect do
+  %em= insect.scientific_name
+  (
+  = insect.common_name
+  )
+  %span.controls= link_to :edit, edit_insect_url(insect)
+
+  - if insect.development_stages.any?
+    .development_stages= render insect.development_stages

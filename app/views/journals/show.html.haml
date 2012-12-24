@@ -1,0 +1,4 @@
+= content_tag_for :article, @journal do
+  = title_and_banner @journal.name
+.controls
+  = link_to 'Edit', edit_journal_url(@journal)

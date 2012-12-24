@@ -1,8 +1,11 @@
 source 'https://rubygems.org'
 
 gem 'draper'
+gem 'haml-rails'
 gem 'jquery-rails'
 gem 'rails', '3.2.9'
+gem "rails3-jquery-autocomplete"
+gem 'sass'
 gem 'taps'
 gem 'thin'
 
@@ -11,6 +14,9 @@ group :assets do
 end
 
 group :development do
+  gem 'annotate'
+  gem 'better_errors'
+  gem 'binding_of_caller'  # for better_errors
   gem 'rspec-rails'
 end
 

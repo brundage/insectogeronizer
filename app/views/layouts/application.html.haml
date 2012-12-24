@@ -1,0 +1,13 @@
+!!! 5
+%html
+  %head
+    %title
+      - if content_for? :title
+        = yield :title
+      \--
+      Insectogeronizer
+    = csrf_meta_tags
+  %body
+    = render 'layouts/header'
+    = yield
+    = render 'layouts/footer'
