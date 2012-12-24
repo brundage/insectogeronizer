@@ -1,0 +1,8 @@
+- if form_errors && form_errors.any?
+  %section
+  #error_explanation
+  %h1= pluralize(form_errors.count, "Error") + "prevented this from being saved"
+  %ul
+    - form_errors.full_messages.each do |msg|
+      %li= msg
+

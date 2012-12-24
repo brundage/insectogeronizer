@@ -1,5 +1,7 @@
 class JournalsController < ApplicationController
 
+  autocomplete :journal, :name, full: true
+
   def create
     @journal = Journal.create params[:journal]
     @journal.new_record? ? render(:edit) : redirect_to(journals_url)

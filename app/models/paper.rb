@@ -13,8 +13,11 @@
 
 class Paper < ActiveRecord::Base
 
-  attr_accessible :authors_attributes, :journal, :locations_attributes,
-                  :page_end, :page_start, :published_on, :title, :volume
+  attr_accessible :authors_attributes, :journal_name, :journal_id,
+                  :locations_attributes, :page_end, :page_start, :published_on,
+                  :title, :volume
+
+  attr_accessor :journal_name
 
   belongs_to :journal, inverse_of: :papers
 

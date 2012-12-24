@@ -1,4 +1,9 @@
 = content_tag_for :article, @journal do
   = title_and_banner @journal.name
+  - if @journal.papers.any?
+    %h2 Papers
+    %ul
+      - @journal.papers.each do |paper|
+        %li= link_to paper.title, paper
 .controls
   = link_to 'Edit', edit_journal_url(@journal)

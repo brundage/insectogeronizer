@@ -1,10 +1,16 @@
 %fieldset
+  = form.label :journal_name
+  = form.autocomplete_field :journal_name, autocomplete_journal_name_journals_url,
+                                      update_elements: { id: '#paper_journal_id' }
+  = form.hidden_field :journal_id
+
+%fieldset
   = form.label :title
   = form.text_field :title
 
 %fieldset
   = form.label :published_on
-  = form.text_field :published_on
+  = form.text_field :published_on, class: 'hasDatepicker'
 
 %fieldset
   = form.label :volume
