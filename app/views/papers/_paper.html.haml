@@ -1,6 +1,0 @@
-= content_tag_for :div, paper do
-  %em= link_to paper.title, paper
-  published in
-  %em= link_to paper.journal.name, paper.journal
-  = paper.published_on
-  %span.controls= link_to :edit, edit_paper_url(paper)

@@ -1,3 +1,0 @@
-class InsectDecorator < ApplicationDecorator
-
-end
