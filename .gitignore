@@ -1,17 +1,1 @@
-**.orig
-*.rbc
-*.sassc
 *.swp
-.rspec
-.sass-cache
-/.bundle
-/coverage/
-/db/*.sqlite3
-/log/*
-/public/system/*
-/spec/tmp/*
-/tmp/*
-/vendor/bundle
-capybara-*.html
-pickle-email-*.html
-rerun.txt
