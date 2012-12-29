@@ -6,12 +6,15 @@ Template.listInsects.events({
 
   'dblclick .commonName': (event, template) ->
     Session.set 'editingCommonName', this._id
-    activateInput(template.find("#commonNameInput"))
-
+    Meteor.setTimeout(
+      () -> activateInput(template.find("#commonNameInput"))
+      200 )
 
   'dblclick .scientificName': (event, template) ->
     Session.set 'editingScientificName', this._id
-    activateInput template.find "#scientificNameInput"
+    Meteor.setTimeout(
+      () -> activateInput(template.find("#scientificNameInput"))
+      200 )
 })
 
 
@@ -30,8 +33,10 @@ Template.insectItem.events okCancelEvents( "#scientificNameInput", {
       Session.set "editingScientificName", null
   })
 
+
 Template.insectItem.editingCommonName = ->
   Session.equals 'editingCommonName', this._id
+
 
 Template.insectItem.editingScientificName = ->
   Session.equals 'editingScientificName', this._id
