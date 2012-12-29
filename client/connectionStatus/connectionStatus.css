@@ -1,0 +1,9 @@
+#connectionStatus {
+  background: #dff;
+  border: solid 2px #f00;
+  padding: 0.5em 1em;
+  position: absolute;
+  top: 0.5em;
+  left: 50%;
+  z-index: 100;
+}

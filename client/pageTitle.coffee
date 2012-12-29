@@ -11,18 +11,21 @@ DocumentTitle = {
       this.title = value
       this.contexts.invalidateAll()
 
-  title:  "Insectogeronizer"
+  title:  ""
 
 }
+
+
+Meteor.startup ->
+  Meteor.autorun renderDocumentTitle
+
+
+Template.pageTitle.title = ->
+  DocumentTitle.get()
+
 
 renderDocumentTitle = ->
   if DocumentTitle.get()
     document.title = DocumentTitle.get() + " -- Insectogeronizer"
   else
     document.title = "Insectogeronizer"
-
-Meteor.startup ->
-  Meteor.autorun renderDocumentTitle
-
-Template.pageTitle.title = ->
-  DocumentTitle.get()

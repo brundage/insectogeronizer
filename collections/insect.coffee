@@ -4,7 +4,7 @@ if Meteor.isClient
   Meteor.subscribe("insects")
 
 
-if Meteor.isClient
+if Meteor.isServer
 #  Insects.allow({
 #
 #    insert: (userId, insect) -> false
