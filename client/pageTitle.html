@@ -1,3 +1,9 @@
 <template name="pageTitle">
-  <h1>Insectogeronizer</h1>
+  <h1 id="pageTitle">
+    {{#if title}}
+      {{title}}
+    {{else}}
+      Insectogeronizer
+    {{/if}}
+  </h1>
 </template>
