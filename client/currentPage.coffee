@@ -1,2 +1,2 @@
 Template.currentPage.connectionStatus = () ->
-  Meteor.status().status
+  if Meteor.status().status == "connected" then "" else Meteor.status().status

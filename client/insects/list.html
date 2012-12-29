@@ -1,3 +1,8 @@
 <template name='listInsects'>
   <h2>Listing Insects</h2>
+  <ul id="insects">
+    {{#each insects}}
+      {{> insectItem}}
+    {{/each}}
+  </ul>
 </template>
