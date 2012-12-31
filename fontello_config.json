@@ -1,0 +1,270 @@
+{
+  "name": "",
+  "glyphs": [
+    {
+      "search": [
+        "twitter"
+      ],
+      "code": 84,
+      "uid": "b1ec8e90c2c85cf0035849980a3789b3",
+      "css": "twitter",
+      "orig_css": "twitter",
+      "orig_code": 84,
+      "src": "zocial",
+      "from": 84
+    },
+    {
+      "search": [
+        "github"
+      ],
+      "code": 103,
+      "uid": "9bba5df43e4e9419975336161e1810c3",
+      "css": "github",
+      "orig_css": "github",
+      "orig_code": 103,
+      "src": "zocial",
+      "from": 103
+    },
+    {
+      "search": [
+        "plus",
+        "expand"
+      ],
+      "code": 8862,
+      "uid": "9e1c33b6849ceb08db8acfaf02188b7d",
+      "css": "plus",
+      "orig_css": "plus-squared",
+      "orig_code": 8862,
+      "src": "entypo",
+      "from": 8862
+    },
+    {
+      "search": [
+        "minus",
+        "collapse"
+      ],
+      "code": 8863,
+      "uid": "4ffa544c1a81c905f0a8a5745d8b9faa",
+      "css": "minus",
+      "orig_css": "minus-squared",
+      "orig_code": 8863,
+      "src": "entypo",
+      "from": 8863
+    },
+    {
+      "search": [
+        "erase"
+      ],
+      "code": 9003,
+      "uid": "e8239f8188c76c925be4bd1bbcc013ac",
+      "css": "cancel",
+      "orig_css": "erase",
+      "orig_code": 9003,
+      "src": "entypo",
+      "from": 9003
+    },
+    {
+      "search": [
+        "check"
+      ],
+      "code": 9745,
+      "from": 9745,
+      "uid": "dd6c6b221a1088ff8a9b9cd32d0b3dd5",
+      "css": "checked",
+      "orig_css": "check",
+      "orig_code": 9745,
+      "src": "fontawesome"
+    },
+    {
+      "search": [
+        "tools"
+      ],
+      "code": 9874,
+      "uid": "6a7b9d4863bb7e6c79e9457a72d689b6",
+      "css": "tools",
+      "orig_css": "tools",
+      "orig_code": 9874,
+      "src": "entypo",
+      "from": 9874
+    },
+    {
+      "search": [
+        "close",
+        "cancel",
+        "reject"
+      ],
+      "code": 10062,
+      "uid": "bf45c39702763f1803b550c36a0ceb12",
+      "css": "remove",
+      "orig_css": "cancel-squared",
+      "orig_code": 10062,
+      "src": "entypo",
+      "from": 10062
+    },
+    {
+      "search": [
+        "document",
+        "article"
+      ],
+      "code": 59189,
+      "from": 59189,
+      "uid": "pzy4lq1ak4datbxpdfj3ya74vjfhwxg1",
+      "css": "journal",
+      "orig_css": "article-alt",
+      "orig_code": 59189,
+      "src": "modernpics"
+    },
+    {
+      "search": [
+        "publish"
+      ],
+      "code": 59213,
+      "uid": "77bcf90f0c68635bab5abfb4ed736696",
+      "css": "publish",
+      "orig_css": "publish",
+      "orig_code": 59213,
+      "src": "entypo",
+      "from": 59213
+    },
+    {
+      "search": [
+        "broadcast",
+        "wifi",
+        "signal"
+      ],
+      "code": 59248,
+      "from": 59248,
+      "uid": "e6t4yvmv401e9gpo2anslq4uqy2iz692",
+      "css": "signal",
+      "orig_css": "signal",
+      "orig_code": 59248,
+      "src": "modernpics"
+    },
+    {
+      "search": [],
+      "code": 59299,
+      "from": 59299,
+      "uid": "2bbde1076919db3d1dcc7f6b43d19bd4",
+      "css": "traffic-cone",
+      "orig_css": "traffic-cone",
+      "orig_code": 59299,
+      "src": "entypo"
+    },
+    {
+      "search": [
+        "emoticon",
+        "smiley",
+        "beer"
+      ],
+      "code": 59403,
+      "meta": {
+        "email": "berbentseva_angela@yahoo.com",
+        "author": "Angela Berbentseva, specially for fontello"
+      },
+      "uid": "3a900d0e9f43f5409211f62bec557379",
+      "css": "emo-beer",
+      "orig_css": "emo-beer",
+      "orig_code": 59403,
+      "src": "fontelico",
+      "from": 59403
+    },
+    {
+      "search": [
+        "load",
+        "progress",
+        "wait"
+      ],
+      "code": 59441,
+      "meta": {
+        "email": "berbentseva_angela@yahoo.com",
+        "author": "Angela Berbentseva, specially for fontello"
+      },
+      "uid": "f0c301ac841dafc38d8eb1b933fc73e5",
+      "css-ext": "animate-spin",
+      "css": "spin",
+      "orig_css": "spin2",
+      "orig_code": 59441,
+      "src": "fontelico",
+      "from": 59441
+    },
+    {
+      "search": [
+        "check",
+        "empty"
+      ],
+      "code": 61590,
+      "uid": "4b900d04e8ab8c82f080c1cfbac5772c",
+      "css": "unchecked",
+      "orig_css": "check-empty",
+      "orig_code": 61590,
+      "src": "fontawesome",
+      "from": 61590
+    },
+    {
+      "search": [
+        "graduation"
+      ],
+      "code": 127891,
+      "uid": "ef74ff62feda486fd414410e782b598a",
+      "css": "acedemic",
+      "orig_css": "graduation-cap",
+      "orig_code": 127891,
+      "src": "entypo",
+      "from": 127891
+    },
+    {
+      "search": [
+        "attention",
+        "warning",
+        "alert"
+      ],
+      "code": 128165,
+      "uid": "39a5a0d7ce8342d149373b2ce219503a",
+      "css": "alert",
+      "orig_css": "alert",
+      "orig_code": 128165,
+      "src": "entypo",
+      "from": 128165
+    },
+    {
+      "search": [
+        "chart",
+        "graph",
+        "line",
+        "diagram"
+      ],
+      "code": 128200,
+      "uid": "7184d8171b6a9b18eabbace94cca21db",
+      "css": "chart-line",
+      "orig_css": "chart-line",
+      "orig_code": 128200,
+      "src": "entypo",
+      "from": 128200
+    },
+    {
+      "search": [
+        "book"
+      ],
+      "code": 128213,
+      "uid": "48b79f27e4798f23bafa07b55dbe5b73",
+      "css": "book",
+      "orig_css": "book",
+      "orig_code": 128213,
+      "src": "entypo",
+      "from": 128213
+    },
+    {
+      "search": [
+        "newspaper",
+        "article"
+      ],
+      "code": 128240,
+      "uid": "da0fd38d651815e3a12f6c030ff1fe5b",
+      "css": "paper",
+      "orig_css": "newspaper",
+      "orig_code": 128240,
+      "src": "entypo",
+      "from": 128240
+    }
+  ]
+}
