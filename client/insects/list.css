@@ -7,7 +7,3 @@ ul#insects {
 ul#insects > li {
   margin-bottom: 0.5em;
 }
-
-.scientificName {
-  font-style: italic;
-}

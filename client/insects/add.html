@@ -1,9 +1,15 @@
 <template name='addInsect'>
-  {{#if addingInsects}}
-    {{> okCancelControl}}
-    {{> insectErrors}}
-    {{> insectForm}}
-  {{else}}
-    {{> addControl}}
-  {{/if}}
+  {{#with controlConfig}}
+    {{#if addingInsect}}
+      {{> okCancelControl}}
+      {{> insectErrors}}
+      <section class='form'>
+        <label for='scientificName'>Scientific Name <input type='text' id='scientificName' /></label>
+        <label for='commonName'>Common Name <input type='text' id='commonName' /></label>
+        <span id='go'>Go</span>
+      </section>
+    {{else}}
+      {{> addControl}}
+    {{/if}}
+  {{/with}}
 </template>

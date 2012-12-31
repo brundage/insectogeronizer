@@ -1,5 +1,9 @@
 Insects = new Meteor.Collection I.collections.insects
 
+if Meteor.isClient
+  Meteor.subscribe I.subscriptions.insects
+
+
 _.extend Insects,
 
   validate : (attrs) ->

@@ -1,16 +1,13 @@
 Template.addControl.events
   'click .add' : (event, template) ->
-    context = Session.get('context')
-    return unless context?
-    Session.set 'editing' + context, true
+    this.add(event, template) if this.add?
+    this.showForm(event, template) if this.showForm?
 
 Template.okCancelControl.events
   'click .cancel' : (event, template) ->
-    context = Session.get('context')
-    return unless context?
-    Session.set 'editing' + context, false
+    this.cancel(event, template) if this.cancel?
+    this.hideForm(event, template) if this.hideForm?
 
   'click .submit' : (event, template) ->
-    context = Session.get('context')
-    return unless context?
-    Session.set 'editing' + context, false
+    this.submit(event, template) if this.submit?
+    this.hideForm(event, template) if this.hideForm?
