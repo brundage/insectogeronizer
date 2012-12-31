@@ -1,0 +1,9 @@
+<template name='addInsect'>
+  {{#if addingInsects}}
+    {{> okCancelControl}}
+    {{> insectErrors}}
+    {{> insectForm}}
+  {{else}}
+    {{> addControl}}
+  {{/if}}
+</template>

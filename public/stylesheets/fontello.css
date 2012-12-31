@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: 'fontello';
+  src: url("/fonts/fontello.eot");
+  src: url("/fonts/fontello.eot?#iefix") format('embedded-opentype'), url("/fonts/fontello.woff") format('woff'), url("/fonts/fontello.ttf") format('truetype'), url("/fonts/fontello.svg#fontello") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: 'fontello';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+  opacity: 0.8;
+/* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+/* Animation center compensation - magrins should be symmetric */
+/* remove if not needed */
+  margin-left: 0.2em;
+/* you can be more comfortable with increased icons size */
+/* font-size: 120%; */
+/* Uncomment for 3D effect */
+/* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-twitter-1:before { content: '\54'; } /* 'T' */
+.icon-github-1:before { content: '\67'; } /* 'g' */
+.icon-erase:before { content: '\232b'; } /* '⌫' */
+.icon-tools:before { content: '\2692'; } /* '⚒' */
+.icon-ok-circle:before { content: '\2714'; } /* '✔' */
+.icon-plus-circled:before { content: '\e807'; } /* '' */
+.icon-article-alt:before { content: '\e735'; } /* '' */
+.icon-signal:before { content: '\e770'; } /* '' */
+.icon-traffic-cone:before { content: '\e7a3'; } /* '' */
+.icon-emo-beer:before { content: '\e80b'; } /* '' */
+.icon-spin2:before { content: '\e831'; } /* '' */
+.icon-graduation-cap:before { content: '🎓'; } /* '\1f393' */
+.icon-alert:before { content: '💥'; } /* '\1f4a5' */
+.icon-book:before { content: '📕'; } /* '\1f4d5' */
+.icon-newspaper:before { content: '📰'; } /* '\1f4f0' */
