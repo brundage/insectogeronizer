@@ -1,6 +1,6 @@
-Insects = new Meteor.Collection("insect")
+Insects = new Meteor.Collection I.collections.insects
 
-Meteor.subscribe("insects")
+Meteor.subscribe I.subscriptions.insects
 
 Session.set 'editingCommonName', null
 Session.set 'editingScientificName', null
@@ -21,7 +21,11 @@ Template.listInsects.events({
 Template.insectItem.events InPlaceEdit.okCancelEvents( "#commonNameInput", {
     cancel: () -> Session.set "editingCommonName", null
     ok: (value) ->
-      Insects.update this._id, { $set: { commonName: value } }
+#      Insects.update this._id, { $set: { commonName: value } }
+      args =
+        id : this._id
+        attrs : { commonName: value }
+      Meteor.call 'updateInsect', args
       Session.set "editingCommonName", null
   })
 
@@ -29,7 +33,10 @@ Template.insectItem.events InPlaceEdit.okCancelEvents( "#commonNameInput", {
 Template.insectItem.events InPlaceEdit.okCancelEvents( "#scientificNameInput", {
     cancel: () -> Session.set "editingScientificName", null
     ok: (value) ->
-      Insects.update this._id, { $set: { scientificName: value } }
+      args =
+        id: this._id
+        attrs: { scientificName: value }
+      Meteor.call 'updateInsect', args
       Session.set "editingScientificName", null
   })
 

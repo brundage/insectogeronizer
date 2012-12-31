@@ -2,7 +2,7 @@ InPlaceEdit = {
 
   activateInput : (args) ->
     input = args.template.find args.selector
-    if input
+    if input?
       input.focus()
       input.select()
 

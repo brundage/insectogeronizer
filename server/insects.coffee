@@ -1,4 +1,6 @@
-Insects = new Meteor.Collection("insect")
+Insects = new Meteor.Collection I.collections.insects
+
+Meteor.publish I.subscriptions.insects, () -> Insects.find({}, { fields: creator: 0})
 
 Insects.allow({
 
@@ -10,15 +12,17 @@ Insects.allow({
 
 })
 
-Meteor.publish("insects", () -> Insects.find({}, { fields: creator: 0}) )
-
-Meteor.methods({
+Meteor.methods
   newInsect: (args) ->
 #    throw new Meteor.Error(403, "You must be logged in") unless this.userId
-    Insects.insert({
+    Insects.insert
       commonName: args.commonName,
       creator: this.userId,
       scientificName: args.scientificName
-    })
-})
 
+  updateInsect: (args) ->
+#    throw new Meteor.Error(403, "You must be logged in") unless this.userId
+    selector =
+      _id : args.id
+    updates = _.pick args.attrs, 'commonName', 'scientificName'
+    Insects.update selector, { $set: updates }, args.options, args.callback
