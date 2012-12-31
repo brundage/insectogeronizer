@@ -1,24 +1,24 @@
+Insects = new Meteor.Collection("insect")
+
+Meteor.subscribe("insects")
+
+Session.set 'editingCommonName', null
 Session.set 'editingScientificName', null
 
 Template.listInsects.insects = () -> Insects.find()
 
 Template.listInsects.events({
 
-  'dblclick .commonName': (event, template) ->
-    Session.set 'editingCommonName', this._id
-    Meteor.setTimeout(
-      () -> activateInput(template.find("#commonNameInput"))
-      200 )
+  'dblclick .commonName, tap .commonName': (event, template) ->
+    InPlaceEdit.editField({ record: this, sessionTag: 'editingCommonName', selector: "#commonNameInput", template: template })
 
-  'dblclick .scientificName': (event, template) ->
-    Session.set 'editingScientificName', this._id
-    Meteor.setTimeout(
-      () -> activateInput(template.find("#scientificNameInput"))
-      200 )
+  'dblclick .scientificName, tap .scientificName': (event, template) ->
+    InPlaceEdit.editField({ record: this, sessionTag: 'editingScientificName', selector: "#scientificNameInput", template: template })
+
 })
 
 
-Template.insectItem.events okCancelEvents( "#commonNameInput", {
+Template.insectItem.events InPlaceEdit.okCancelEvents( "#commonNameInput", {
     cancel: () -> Session.set "editingCommonName", null
     ok: (value) ->
       Insects.update this._id, { $set: { commonName: value } }
@@ -26,7 +26,7 @@ Template.insectItem.events okCancelEvents( "#commonNameInput", {
   })
 
 
-Template.insectItem.events okCancelEvents( "#scientificNameInput", {
+Template.insectItem.events InPlaceEdit.okCancelEvents( "#scientificNameInput", {
     cancel: () -> Session.set "editingScientificName", null
     ok: (value) ->
       Insects.update this._id, { $set: { scientificName: value } }

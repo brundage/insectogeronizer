@@ -1,12 +1,30 @@
 <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <link rel="stylesheet" href="/stylesheets/normalize.css">
+  <link rel="stylesheet" href="/stylesheets/main.css">
+  <script src="/javascripts/vendor/modernizr-2.6.2.min.js"></script>
+  <script src="/javascripts/vendor/zepto.min.js"></script>
+  <script src="/javascripts/helper.js"></script>
   <title>Insectogeronizer</title>
 </head>
 <body>
-  <h1>Insectogeronizer</h1>
+  <header>
+    <h1>Insectogeronizer</h1>
+  </header>
   <article>
-    {{> pageTitle}}
-    {{renderPage}}
+    <header>
+      {{> pageTitle}}
+    </header>
+    <section>
+      {{renderPage}}
+    </section>
   </article>
-  {{> mainNav}}
-  {{> connectionStatus}}
+  <footer>
+    {{> mainNav}}
+    {{> connectionStatus}}
+  </footer>
 </body>
