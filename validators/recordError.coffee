@@ -23,4 +23,5 @@ RecordError.prototype =
 
   merge: (other) ->
     for attr of other.errors
-      this.add attr, other.errors[attr]
+      for message in other.errors[attr]
+        this.add attr, message

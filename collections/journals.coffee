@@ -8,6 +8,7 @@ _.extend Journals,
   validate : (attrs) ->
     validator = new Validatable(attrs)
     validator.addValidator new PresenceValidator('name')
+    validator.addValidator new UniquenessValidator(Journals,'name')
     validator.validate()
 
 
