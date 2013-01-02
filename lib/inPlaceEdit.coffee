@@ -13,8 +13,8 @@ InPlaceEdit = {
       this.timeout )
 
   okCancelEvents : (selector, callbacks) ->
-    cancel = callbacks.cancel || () ->
-    ok = callbacks.ok || () ->
+    cancel = callbacks.cancel || ->
+    ok = callbacks.ok || ->
     events = {}
     events['keyup '+selector+', keydown '+selector+', focusout '+selector] = (evt) ->
       if evt.type == "keydown" && evt.which == 27

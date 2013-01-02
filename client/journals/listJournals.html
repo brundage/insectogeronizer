@@ -1,0 +1,8 @@
+<template name='listJournals'>
+  {{> addJournal}}
+  <ul id='journals'>
+    {{#each journals}}
+      {{> journalItem}}
+    {{/each}}
+  </ul>
+</template>

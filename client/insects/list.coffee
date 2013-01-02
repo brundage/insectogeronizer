@@ -1,4 +1,4 @@
-Template.listInsects.insects = () -> Insects.find()
+Template.listInsects.insects = -> Insects.find()
 
 Template.listInsects.events
   'dblclick .commonName, tap .commonName': (event, template) ->
@@ -15,3 +15,5 @@ Template.listInsects.events
       selector: "#scientificNameInput",
       template: template
 
+Template.listInsects.rendered = ->
+  DocumentTitle.set 'Insects'

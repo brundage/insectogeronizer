@@ -1,4 +1,4 @@
-DocumentTitle = {
+DocumentTitle =
 
   contexts: new Meteor.deps._ContextSet()
 
@@ -11,9 +11,7 @@ DocumentTitle = {
       this.title = value
       this.contexts.invalidateAll()
 
-  title:  ""
-
-}
+  title: ""
 
 
 Meteor.startup ->

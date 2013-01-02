@@ -1,0 +1,13 @@
+<template name='addJournal'>
+  {{#with controlCallbacks}}
+    {{#if addingJournal}}
+      <section class='form'>
+        {{> journalErrors}}
+        <label for='journalName'>Journal <input type='text' id='journalName' /></label>
+        {{> okCancelControl}}
+      </section>
+    {{else}}
+      {{> addControl}}
+    {{/if}}
+  {{/with}}
+</template>

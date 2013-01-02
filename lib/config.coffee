@@ -1,9 +1,8 @@
-I = {
-  collections : {
+I =
+  collections :
     insects : 'insects'
-  }
+    journals : 'journals'
 
-  subscriptions : {
+  subscriptions :
     insects : 'insects'
-  }
-}
+    journals : 'journals'

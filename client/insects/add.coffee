@@ -1,4 +1,4 @@
-Session.set 'addingInsect', true
+Session.set 'addingInsect', null
 
 Template.addInsect.controlCallbacks =
   add : (event, template) ->
@@ -6,7 +6,7 @@ Template.addInsect.controlCallbacks =
     Session.set 'addInsectErrors', null
  
   cancel : (event, template) ->
-    Session.set 'addingInsect', false
+    Session.set 'addingInsect', null
     Session.set 'addInsectErrors', null
 
   submit : (event, template) ->
@@ -16,7 +16,7 @@ Template.addInsect.controlCallbacks =
     errors = Insects.validate attrs
     Session.set 'addInsectErrors', errors
     unless errors?
-      Session.set 'addingInsect', false
+      Session.set 'addingInsect', null
       Meteor.call 'newInsect', attrs
 
 
@@ -24,7 +24,7 @@ Template.addInsect.addingInsect = ->
   Session.get 'addingInsect'
 
 
-Template.addInsect.events =
+Template.addInsect.events
   'keyup #scientificName, keyup #commonName' : (event, template) ->
     if event.which == 13
       this.submit()

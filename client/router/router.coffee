@@ -1,10 +1,11 @@
-Meteor.Router.add({
+Meteor.Router.add
 
-  '/': () ->
-    Session.set 'context', null
+  '/': ->
+    DocumentTitle.set(null)
     '/'
 
-  '/insects': () ->
-    Session.set 'context', 'insects'
+  '/insects': ->
     'listInsects'
-})
+
+  '/journals': ->
+    'listJournals'

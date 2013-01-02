@@ -2,7 +2,9 @@ Session.set 'editingCommonName', null
 Session.set 'editingScientificName', null
 
 Template.insectItem.events InPlaceEdit.okCancelEvents( "#commonNameInput",
-    cancel: () -> Session.set "editingCommonName", null
+    cancel: ->
+      Session.set "editingCommonName", null
+
     ok: (value) ->
       args =
         id : this._id
@@ -13,7 +15,9 @@ Template.insectItem.events InPlaceEdit.okCancelEvents( "#commonNameInput",
 
 
 Template.insectItem.events InPlaceEdit.okCancelEvents( "#scientificNameInput",
-    cancel: () -> Session.set "editingScientificName", null
+    cancel: ->
+      Session.set "editingScientificName", null
+
     ok: (value) ->
       args =
         id: this._id
@@ -23,7 +27,7 @@ Template.insectItem.events InPlaceEdit.okCancelEvents( "#scientificNameInput",
   )
 
 
-Template.insectItem.events =
+Template.insectItem.events
   'click .destroy' : (event, template) ->
     Meteor.call 'destroyInsect', this._id
 
