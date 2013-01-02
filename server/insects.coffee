@@ -11,6 +11,10 @@ Insects.allow({
 })
 
 Meteor.methods
+  destroyInsect: (id) ->
+#    throw new Meteor.Error(403, "You must be logged in") unless this.userId
+    Insects.remove id
+  
   newInsect: (args) ->
 #    throw new Meteor.Error(403, "You must be logged in") unless this.userId
     errors = Insects.validate args

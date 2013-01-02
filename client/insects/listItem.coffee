@@ -7,8 +7,8 @@ Template.insectItem.events InPlaceEdit.okCancelEvents( "#commonNameInput",
       args =
         id : this._id
         attrs : { commonName: value }
-      Meteor.call 'updateInsect', args
       Session.set "editingCommonName", null
+      Meteor.call 'updateInsect', args
   )
 
 
@@ -18,9 +18,14 @@ Template.insectItem.events InPlaceEdit.okCancelEvents( "#scientificNameInput",
       args =
         id: this._id
         attrs: { scientificName: value }
-      Meteor.call 'updateInsect', args
       Session.set "editingScientificName", null
+      Meteor.call 'updateInsect', args
   )
+
+
+Template.insectItem.events =
+  'click .destroy' : (event, template) ->
+    Meteor.call 'destroyInsect', this._id
 
 
 Template.insectItem.editingCommonName = ->

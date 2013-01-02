@@ -1,12 +1,11 @@
 <template name='addInsect'>
-  {{#with controlConfig}}
+  {{#with controlCallbacks}}
     {{#if addingInsect}}
-      {{> okCancelControl}}
-      {{> insectErrors}}
       <section class='form'>
+        {{> insectErrors}}
         <label for='scientificName'>Scientific Name <input type='text' id='scientificName' /></label>
         <label for='commonName'>Common Name <input type='text' id='commonName' /></label>
-        <span id='go'>Go</span>
+        {{> okCancelControl}}
       </section>
     {{else}}
       {{> addControl}}

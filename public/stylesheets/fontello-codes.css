@@ -1,6 +1,4 @@
 @charset "UTF-8";
-
-
 .icon-twitter:before { content: '\54'; } /* 'T' */
 .icon-github:before { content: '\67'; } /* 'g' */
 .icon-plus:before { content: '\229e'; } /* '⊞' */

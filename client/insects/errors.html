@@ -1,7 +1,13 @@
 <template name='insectErrors'>
   {{#if errors}}
     <section class='errors'>
-    errors
+      <h1>Errors</h1>
+      {{#if errors.commonName}}
+        Common Name {{errors.commonName}}
+      {{/if}}
+      {{#if errors.scientificName}}
+        Scientific Name {{errors.scientificName}}
+      {{/if}}
     </section>
   {{/if}}
 </template>

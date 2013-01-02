@@ -1,5 +1,6 @@
 <template name='insectItem'>
-  <li id="{{_id}}">
+  <li class='insectItem' id="{{_id}}">
+    <span class='destroy icon-remove'></span>
     {{#if editingScientificName}}
       <input id="scientificNameInput" class="scientificName" type="text" value="{{scientificName}}" />
     {{else}}
@@ -13,6 +14,5 @@
     {{else}}
       <span class="editable commonName">{{commonName}}</span>
     {{/if}}
-    {{_id}}
   </li>
 </template>

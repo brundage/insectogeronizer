@@ -1,33 +1,30 @@
-Session.set 'addingInsect', false
+Session.set 'addingInsect', true
 
-Template.addInsect.controlConfig =
+Template.addInsect.controlCallbacks =
   add : (event, template) ->
+    Session.set 'addingInsect', true
     Session.set 'addInsectErrors', null
  
   cancel : (event, template) ->
+    Session.set 'addingInsect', false
     Session.set 'addInsectErrors', null
 
-  errors : () ->
-    Session.get 'addInsectErrors'
-
-  formTemplate : this
-
-  hideForm : (event, template) ->
-    Session.set 'addingInsect', false unless this.errors()?
-
-  showForm : (event, template) ->
-    Session.set 'addingInsect', true
-
   submit : (event, template) ->
-    console.log 'sub template', template
     attrs =
-      commonName : this.formTemplate.find('input#commonName').value
-      scientific : this.formTemplate.find('input#scientificName').value
+      commonName : DomUtils.find(document, 'input#commonName').value
+      scientificName : DomUtils.find(document, 'input#scientificName').value
     errors = Insects.validate attrs
     Session.set 'addInsectErrors', errors
     unless errors?
+      Session.set 'addingInsect', false
       Meteor.call 'newInsect', attrs
 
 
 Template.addInsect.addingInsect = ->
   Session.get 'addingInsect'
+
+
+Template.addInsect.events =
+  'keyup #scientificName, keyup #commonName' : (event, template) ->
+    if event.which == 13
+      this.submit()
