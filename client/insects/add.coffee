@@ -14,10 +14,11 @@ Template.addInsect.controlCallbacks =
       commonName : DomUtils.find(document, 'input#commonName').value
       scientificName : DomUtils.find(document, 'input#scientificName').value
     errors = Insects.validate attrs
-    Session.set 'addInsectErrors', errors
-    unless errors?
+    if errors.count() == 0
       Session.set 'addingInsect', null
       Meteor.call 'newInsect', attrs
+    else
+      Session.set 'addInsectErrors', errors
 
 
 Template.addInsect.addingInsect = ->
@@ -28,3 +29,7 @@ Template.addInsect.events
   'keyup #scientificName, keyup #commonName' : (event, template) ->
     if event.which == 13
       this.submit()
+
+Template.addInsect.errors = ->
+  errors = Session.get('addInsectErrors')
+  errors.errors if errors?

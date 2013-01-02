@@ -6,12 +6,12 @@ class Validatable
   addValidator: (validator) ->
     this.validators.push validator
 
-  isValid: (errors) ->
-    this.validate(errors)
+  isValid: () ->
+    this.validate()
     this.errors.count() == 0
 
-  validate: (errors) ->
-    this.errors = errors || new RecordError()
+  validate: () ->
+    this.errors = new RecordError()
     for validator in this.validators
       this.errors.merge validator.validate this.attrs
     this.errors

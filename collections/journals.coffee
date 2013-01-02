@@ -6,10 +6,11 @@ if Meteor.isClient
 _.extend Journals,
 
   validate : (attrs) ->
-    validator = new Validatable(attrs)
-    validator.addValidator new PresenceValidator('name')
-    validator.addValidator new UniquenessValidator(Journals,'name')
-    validator.validate()
+    unless this.validator?
+      this.validator = new Validatable(attrs)
+      this.validator.addValidator new PresenceValidator('name')
+      this.validator.addValidator new UniquenessValidator(Journals,'name')
+    this.validator.validate()
 
 
   writableAttributes : [ 'name' ]

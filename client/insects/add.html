@@ -3,8 +3,18 @@
     {{#if addingInsect}}
       <section class='form'>
         {{> insectErrors}}
-        <label for='scientificName'>Scientific Name <input type='text' id='scientificName' /></label>
-        <label for='commonName'>Common Name <input type='text' id='commonName' /></label>
+        <div class='field required'>
+          <label for='scientificName'>Scientific Name <input type='text' id='scientificName' /></label>
+          {{#with errors.scientificName}}
+            {{> fieldErrors}}
+          {{/with}}
+        </div>
+        <div class='field required'>
+          <label for='commonName'>Common Name <input type='text' id='commonName' /></label>
+          {{#with errors.commonName}}
+            {{> fieldErrors}}
+          {{/with}}
+        </div>
         {{> okCancelControl}}
       </section>
     {{else}}
