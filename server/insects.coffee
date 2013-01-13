@@ -18,7 +18,8 @@ Meteor.methods
   newInsect: (args) ->
 #    throw new Meteor.Error(403, "You must be logged in") unless this.userId
     errors = Insects.validate args
-    if errors
+    if errors.count() > 0
+      console.log 'error creating insect', errors
     else
       Insects.insert
         commonName: args.commonName,
