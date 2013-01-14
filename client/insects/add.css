@@ -1,0 +1,19 @@
+#addInsect .form {
+  background: white;
+  padding: 0 2em 1em 2em;
+  position: absolute;
+  top: 2em;
+  right: 2em;
+  z-index: 5;
+}
+
+#addInsect h1 {
+  font-size: 1.5em;
+  margin: 0 0 0.5em 0;
+  overflow: auto;
+}
+
+#addInsect h1 .controls {
+  font-size: 66.66%;
+  float: right;
+}

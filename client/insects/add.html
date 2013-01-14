@@ -1,8 +1,8 @@
 <template name='addInsect'>
-  {{#with controlCallbacks}}
-    {{#if addingInsect}}
-      <section class='form'>
-        {{> insectErrors}}
+  <aside id='addInsect'>
+    {{#with controlCallbacks}}
+      <div class='form fade {{formVisibility}}'>
+        <h1>New Insect {{> okCancelControl}}</h1>
         <div class='field required'>
           <label for='scientificName'>Scientific Name <input type='text' id='scientificName' /></label>
           {{#with errors.scientificName}}
@@ -15,10 +15,10 @@
             {{> fieldErrors}}
           {{/with}}
         </div>
-        {{> okCancelControl}}
-      </section>
-    {{else}}
-      {{> addControl}}
-    {{/if}}
-  {{/with}}
+      </div>
+      <div class='fade control {{addControlVisibility}}'>
+        {{> addControl}}
+      </div>
+    {{/with}}
+  </aside>
 </template>

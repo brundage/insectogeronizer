@@ -29,7 +29,19 @@ Template.addInsect.events
   'keyup #scientificName, keyup #commonName' : (event, template) ->
     if event.which == 13
       this.submit()
+    else if event.which == 27
+      Session.set 'addingInsect', null
+      Session.set 'addInsectErrors', null
+
 
 Template.addInsect.errors = ->
   errors = Session.get('addInsectErrors')
   errors.errors if errors?
+
+
+Template.addInsect.addControlVisibility = ->
+  if Session.get('addingInsect')? then 'invisible' else ''
+
+
+Template.addInsect.formVisibility = ->
+  if Session.get('addingInsect')? then '' else 'invisible'
