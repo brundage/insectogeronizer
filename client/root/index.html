@@ -16,16 +16,9 @@
   <title>Insectogeronizer</title>
 </head>
 <body>
-  <header>
-    <h1>Insectogeronizer</h1>
-  </header>
+  {{> pageTitle}}
   <article>
-    <header>
-      {{> pageTitle}}
-    </header>
-    <section>
-      {{renderPage}}
-    </section>
+    {{renderPage}}
   </article>
   <footer>
     {{> mainNav}}

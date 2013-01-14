@@ -1,4 +1,6 @@
-Template.listInsects.insects = -> Insects.find()
+Template.listInsects.insects = ->
+  Insects.find {}, { sort: ['scientificName', 'asc'] }
+
 
 Template.listInsects.events
   'dblclick .commonName, tap .commonName': (event, template) ->
@@ -14,6 +16,7 @@ Template.listInsects.events
       sessionTag: 'editingScientificName',
       selector: "#scientificNameInput",
       template: template
+
 
 Template.listInsects.rendered = ->
   DocumentTitle.set 'Insects'

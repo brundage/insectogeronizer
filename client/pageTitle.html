@@ -1,5 +1,11 @@
 <template name="pageTitle">
-  {{#if title}}
-    <h2 id="pageTitle">{{title}}</h2>
-  {{/if}}
+  <header>
+    <h1 id="pageTitle">
+      {{#if title}}
+        {{title}} &mdash; Insectogeronizer
+      {{else}}
+        Insectogeronizer
+      {{/if}}
+    </h1>
+  </header>
 </template>

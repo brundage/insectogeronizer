@@ -1,12 +1,17 @@
-Session.set 'addingInsect', null
+Session.set 'showAddForm', null
 
 Template.addInsect.controlCallbacks =
   add : (event, template) ->
-    Session.set 'addingInsect', true
+    Session.set 'showAddForm', true
     Session.set 'addInsectErrors', null
- 
+    Meteor.setTimeout ->
+      i = DomUtils.find(document, 'input#scientificName')
+      if i?
+        i.focus()
+    , 500
+      
   cancel : (event, template) ->
-    Session.set 'addingInsect', null
+    Session.set 'showAddForm', null
     Session.set 'addInsectErrors', null
 
   submit : (event, template) ->
@@ -15,14 +20,14 @@ Template.addInsect.controlCallbacks =
       scientificName : DomUtils.find(document, 'input#scientificName').value
     errors = Insects.validate attrs
     if errors.count() == 0
-      Session.set 'addingInsect', null
+      Session.set 'showAddForm', null
       Meteor.call 'newInsect', attrs
     else
       Session.set 'addInsectErrors', errors
 
 
 Template.addInsect.addingInsect = ->
-  Session.get 'addingInsect'
+  Session.get 'showAddForm'
 
 
 Template.addInsect.events
@@ -30,7 +35,7 @@ Template.addInsect.events
     if event.which == 13
       this.submit()
     else if event.which == 27
-      Session.set 'addingInsect', null
+      Session.set 'showAddForm', null
       Session.set 'addInsectErrors', null
 
 
@@ -40,8 +45,8 @@ Template.addInsect.errors = ->
 
 
 Template.addInsect.addControlVisibility = ->
-  if Session.get('addingInsect')? then 'invisible' else ''
+  if Session.get('showAddForm')? then 'invisible' else ''
 
 
 Template.addInsect.formVisibility = ->
-  if Session.get('addingInsect')? then '' else 'invisible'
+  if Session.get('showAddForm')? then '' else 'invisible'
