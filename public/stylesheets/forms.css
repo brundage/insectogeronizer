@@ -1,0 +1,21 @@
+.fieldErrors {
+  list-style-type: none;
+}
+
+.form {
+  background: white;
+  border: solid 1px black;
+  border-bottom-left-radius: 2em 1em;
+  border-bottom-right-radius: 2em 1em;
+  border-top-left-radius: 2em 1em;
+  border-top-right-radius: 2em 1em;
+  -moz-border-bottom-left-radius: 2em 1em;
+  -moz-border-bottom-right-radius: 2em 1em;
+  -moz-border-top-left-radius: 2em 1em;
+  -moz-border-top-right-radius: 2em 1em;
+  padding: 1em 2em;
+  position: absolute;
+  top: 2em;
+  right: 2em;
+  z-index: 5;
+}

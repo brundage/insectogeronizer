@@ -28,6 +28,13 @@ fieldset {
 textarea { resize: vertical; }
 
 /* Insectogeronizer's custom styles */
+.editable {
+  cursor: pointer;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  color: #a00;
+}
 
 h1#pageTitle { margin: 0.5em 0; }
 
