@@ -3,6 +3,20 @@
   "glyphs": [
     {
       "search": [
+        "rain",
+        "drizzle",
+        "weather"
+      ],
+      "code": 56,
+      "uid": "8d8a2d9bcc41c7ac794e83ffbb919c3c",
+      "css": "rain",
+      "orig_css": "rain-inv",
+      "orig_code": 56,
+      "src": "meteocons",
+      "from": 56
+    },
+    {
+      "search": [
         "twitter"
       ],
       "code": 84,
@@ -116,6 +130,30 @@
     },
     {
       "search": [
+        "login"
+      ],
+      "code": 59200,
+      "uid": "a204f0fa972408eaae5a363c444991b2",
+      "css": "login",
+      "orig_css": "login",
+      "orig_code": 59200,
+      "src": "entypo",
+      "from": 59200
+    },
+    {
+      "search": [
+        "logout"
+      ],
+      "code": 59201,
+      "uid": "2d76f2c8d13be40694ecadfea7fb83c3",
+      "css": "logout",
+      "orig_css": "logout",
+      "orig_code": 59201,
+      "src": "entypo",
+      "from": 59201
+    },
+    {
+      "search": [
         "publish"
       ],
       "code": 59213,
@@ -152,40 +190,22 @@
     },
     {
       "search": [
-        "emoticon",
-        "smiley",
-        "beer"
-      ],
-      "code": 59403,
-      "meta": {
-        "email": "berbentseva_angela@yahoo.com",
-        "author": "Angela Berbentseva, specially for fontello"
-      },
-      "uid": "3a900d0e9f43f5409211f62bec557379",
-      "css": "emo-beer",
-      "orig_css": "emo-beer",
-      "orig_code": 59403,
-      "src": "fontelico",
-      "from": 59403
-    },
-    {
-      "search": [
         "load",
         "progress",
         "wait"
       ],
-      "code": 59441,
+      "code": 59449,
       "meta": {
         "email": "berbentseva_angela@yahoo.com",
         "author": "Angela Berbentseva, specially for fontello"
       },
-      "uid": "f0c301ac841dafc38d8eb1b933fc73e5",
+      "uid": "9bc2902722abb366a213a052ade360bc",
       "css-ext": "animate-spin",
       "css": "spin",
-      "orig_css": "spin2",
-      "orig_code": 59441,
+      "orig_css": "spin6",
+      "orig_code": 59449,
       "src": "fontelico",
-      "from": 59441
+      "from": 59449
     },
     {
       "search": [
@@ -199,6 +219,18 @@
       "orig_code": 61590,
       "src": "fontawesome",
       "from": 61590
+    },
+    {
+      "search": [
+        "beer"
+      ],
+      "code": 61692,
+      "uid": "890bcc8897cce868f6ee65cadadde036",
+      "css": "beer",
+      "orig_css": "beer",
+      "orig_code": 61692,
+      "src": "fontawesome",
+      "from": 61692
     },
     {
       "search": [
@@ -252,6 +284,18 @@
       "orig_code": 128213,
       "src": "entypo",
       "from": 128213
+    },
+    {
+      "search": [
+        "download"
+      ],
+      "code": 128229,
+      "from": 128229,
+      "uid": "7yekfd0qlkgp6emwfbo10sjdmf8pewli",
+      "css": "download",
+      "orig_css": "download",
+      "orig_code": 128229,
+      "src": "typicons"
     },
     {
       "search": [

@@ -30,6 +30,7 @@
 /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
+.icon-rain:before { content: '\38'; } /* '8' */
 .icon-twitter:before { content: '\54'; } /* 'T' */
 .icon-github:before { content: '\67'; } /* 'g' */
 .icon-plus:before { content: '\229e'; } /* '⊞' */
@@ -39,14 +40,17 @@
 .icon-tools:before { content: '\2692'; } /* '⚒' */
 .icon-remove:before { content: '\274e'; } /* '❎' */
 .icon-journal:before { content: '\e735'; } /* '' */
+.icon-login:before { content: '\e740'; } /* '' */
+.icon-logout:before { content: '\e741'; } /* '' */
 .icon-publish:before { content: '\e74d'; } /* '' */
 .icon-signal:before { content: '\e770'; } /* '' */
 .icon-traffic-cone:before { content: '\e7a3'; } /* '' */
-.icon-emo-beer:before { content: '\e80b'; } /* '' */
-.icon-spin:before { content: '\e831'; } /* '' */
+.icon-spin:before { content: '\e839'; } /* '' */
 .icon-unchecked:before { content: '\f096'; } /* '' */
+.icon-beer:before { content: '\f0fc'; } /* '' */
 .icon-acedemic:before { content: '🎓'; } /* '\1f393' */
 .icon-alert:before { content: '💥'; } /* '\1f4a5' */
 .icon-chart-line:before { content: '📈'; } /* '\1f4c8' */
 .icon-book:before { content: '📕'; } /* '\1f4d5' */
+.icon-download:before { content: '📥'; } /* '\1f4e5' */
 .icon-paper:before { content: '📰'; } /* '\1f4f0' */
