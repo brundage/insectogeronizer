@@ -2,18 +2,20 @@
   <aside id='addInsect'>
     {{#with controlCallbacks}}
       <div class='form fade {{formVisibility}}'>
-        <h1>New Insect {{> okCancelControl}}</h1>
-        <div class='field required'>
-          <label for='scientificName'>Scientific Name <input type='text' id='scientificName' /></label>
-          {{#with errors.scientificName}}
-            {{> fieldErrors}}
-          {{/with}}
-        </div>
-        <div class='field required'>
-          <label for='commonName'>Common Name <input type='text' id='commonName' /></label>
-          {{#with errors.commonName}}
-            {{> fieldErrors}}
-          {{/with}}
+        <div class='container'>
+          <h1>New Insect {{> okCancelControl}}</h1>
+          <div class='field required'>
+            <label for='scientificName'>Scientific Name <input type='text' id='scientificName' /></label>
+            {{#with errors.scientificName}}
+              {{> fieldErrors}}
+            {{/with}}
+          </div>
+          <div class='field required'>
+            <label for='commonName'>Common Name <input type='text' id='commonName' /></label>
+            {{#with errors.commonName}}
+              {{> fieldErrors}}
+            {{/with}}
+          </div>
         </div>
       </div>
       <div class='fade control {{addControlVisibility}}'>

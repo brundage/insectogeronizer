@@ -10,6 +10,10 @@ class Validatable
     this.validate()
     this.errors.count() == 0
 
+  setAttributes: (attrs) ->
+    this.attrs = attrs
+    attrs
+
   validate: () ->
     this.errors = new RecordError()
     for validator in this.validators

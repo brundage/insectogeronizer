@@ -35,8 +35,7 @@ Template.addInsect.events
     if event.which == 13
       this.submit()
     else if event.which == 27
-      Session.set 'showAddForm', null
-      Session.set 'addInsectErrors', null
+      this.cancel()
 
 
 Template.addInsect.errors = ->

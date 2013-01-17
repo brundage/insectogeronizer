@@ -7,7 +7,9 @@ if Meteor.isClient
 _.extend Insects,
 
   validate : (attrs) ->
-    unless this.validator?
+    if this.validator?
+      this.validator.setAttributes attrs
+    else
       this.validator = new Validatable(attrs)
       this.validator.addValidator new PresenceValidator('commonName', 'scientificName')
       this.validator.addValidator new UniquenessValidator(Insects,'scientificName')
