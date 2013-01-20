@@ -2,7 +2,6 @@
   <aside id='addInsect'>
     {{#with controlCallbacks}}
       <div class='form fade {{formVisibility}}'>
-        <div class='container'>
           <h1>New Insect {{> okCancelControl}}</h1>
           <div class='field required'>
             <label for='scientificName'>Scientific Name <input type='text' id='scientificName' /></label>
@@ -16,7 +15,6 @@
               {{> fieldErrors}}
             {{/with}}
           </div>
-        </div>
       </div>
       <div class='fade control {{addControlVisibility}}'>
         {{> addControl}}
