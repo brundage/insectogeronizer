@@ -1,14 +1,15 @@
 Session.set 'showAddForm', null
 
+$(document).delegate '#addInsect', 'msTransitionEnd oTransitionEnd transitionend webkitTransitionEnd', (event) ->
+  container = $(this).find('.form')
+  unless container.hasClass('invisible')
+    container.find('input#scientificName').focus()
+
+
 Template.addInsect.controlCallbacks =
   add : (event, template) ->
     Session.set 'showAddForm', true
     Session.set 'addInsectErrors', null
-    Meteor.setTimeout ->
-      i = DomUtils.find(document, 'input#scientificName')
-      if i?
-        i.focus()
-    , 500
       
   cancel : (event, template) ->
     Session.set 'showAddForm', null
