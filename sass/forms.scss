@@ -1,0 +1,18 @@
+@import "compass/css3/border-radius";
+@import "compass/css3/box-shadow";
+
+.fieldErrors {
+  list-style-type: none;
+}
+
+.form {
+  @include border-radius(2em 1em);
+  @include box-shadow(0 0 0.5em 0.5em #aaa);
+  background-color: white;
+  border: solid 1px black;
+  padding: 1em 2em;
+  position: absolute;
+  top: 2em;
+  right: 2em;
+  z-index: 5;
+}
