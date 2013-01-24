@@ -4,7 +4,7 @@ Insects.allow({
 
   insert: (userId, insect) -> false
 
-  remove: (userId, insects) -> true
+  remove: (userId, insects) -> false
 
   update: (userId, insects, fields, mongo_mods) -> false
 

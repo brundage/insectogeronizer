@@ -4,7 +4,7 @@ Journals.allow
 
   insert: (userId, journal) -> false
 
-  remove: (userId, journal) -> true
+  remove: (userId, journal) -> false
 
   update: (userId, journal, fields, mongo_mods) -> false
 
